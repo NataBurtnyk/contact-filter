@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS Contact;
+
+CREATE TABLE Contact
+(
+    ID            SERIAL PRIMARY KEY,
+    NAME          VARCHAR(100) NOT NULL
+);
+
