@@ -21,6 +21,6 @@ public class ContactController {
 
     @GetMapping(EndpointPath.CONTACTS)
     List<Contact> getContacts(@RequestParam String nameFilter) {
-       return contactService.findByName(nameFilter);
+       return contactService.filterBy(nameFilter);
     }
 }
