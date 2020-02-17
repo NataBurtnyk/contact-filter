@@ -20,7 +20,9 @@ public class ContactService {
 
     public List<Contact> filterBy(String nameFilter) {
         List<Contact> allContacts = contactRepository.findAll();
-
+        if (nameFilter == null){
+            return allContacts;
+        }
       return allContacts.stream()
               .filter(contact -> !contact.getName().matches(nameFilter))
               .collect(Collectors.toList());
